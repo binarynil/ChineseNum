@@ -16,14 +16,13 @@ public class ChineseNum {
         BigInteger h = qinv.multiply(m1.subtract(m2)).mod(p);
         BigInteger m = m2.add(h.multiply(q));
         String mString = "" + m;
-        //String hex = BigInteger.toHexString(m);
+        
         BigInteger hex2 = new BigInteger(mString,10);
         String hexString = hex2.toString(16);
         String hexToascii = hex2ascii(hexString);
         
 
         System.out.println("m: " + m);
-        System.out.println();
         System.out.println("hex: " + hexString);
         System.out.println("ascii: " + hexToascii);
     
